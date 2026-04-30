@@ -1,0 +1,185 @@
+Convert into JSON,Yaml
+
+John Smith works in the IT department, earns $75,000 per year, started on January 15, 2020, and his skills include Java, Python, and SQL. Sarah Johnson works in HR, earns $65,000 per year, started on March 1, 2019, and her skills include Recruitment and Training
+
+
+JSON:
+{
+  "employees": [
+    {
+      "name": "John Smith",
+      "department": "IT",
+      "salary": 75000,
+      "startDate": "2020-01-15",
+      "skills": ["Java", "Python", "SQL"]
+    }
+  ]
+}
+
+YAML:
+employees:
+  - name: John Smith
+    department: IT
+    salary: 75000
+    startDate: 2020-01-15
+    skills:
+      - Java
+      - Python
+      - SQL
+
+
+Convert into JSON,CSV
+
+We have three products: Laptop costs $1200 with 15 units in stock, Mouse costs $25 with 50 units in stock, and Keyboard costs $75 with 30 units in stock.
+
+JSON
+{
+  "products": [
+    {
+      "name": "Laptop",
+      "price": 1200,
+      "stock": 15
+    },
+    {
+      "name": "Mouse",
+      "price": 25,
+      "stock": 50
+    },
+    {
+      "name": "Keyboard",
+      "price": 75,
+      "stock": 30
+    }
+  ]
+}
+CSV
+
+name,price,stock
+Laptop,1200,15
+Mouse,25,50
+Keyboard,75,30
+
+Convert into JSON,XML
+Alice posted 'Just finished my Java project!' on January 20, 2024 at 3:45 PM. She received 15 likes from Bob, Charlie, and Diana. There were 3 comments: Bob said 'Great work!', Charlie said 'Congratulations!', and Diana said 'Well done, Alice!'. The post was tagged with #programming and #java.
+
+JSON:
+
+{
+  "post": {
+    "user": "Alice",
+    "content": "Just finished my Java project!",
+    "date": "2024-01-20",
+    "time": "3:45 PM",
+    "likes": {
+      "count": 15,
+      "users": ["Bob", "Charlie", "Diana"]
+    },
+    "comments": [
+      {
+        "user": "Bob",
+        "comment": "Great work!"
+      },
+      {
+        "user": "Charlie",
+        "comment": "Congratulations!"
+      },
+      {
+        "user": "Diana",
+        "comment": "Well done, Alice!"
+      }
+    ],
+    "tags": ["#programming", "#java"]
+  }
+}
+
+YML:
+
+<post>
+    <user>Alice</user>
+    <content>Just finished my Java project!</content>
+    <date>2024-01-20</date>
+    <time>3:45 PM</time>
+
+    <likes>
+        <count>15</count>
+        <users>
+            <user>Bob</user>
+            <user>Charlie</user>
+            <user>Diana</user>
+        </users>
+    </likes>
+
+    <comments>
+        <comment>
+            <user>Bob</user>
+            <text>Great work!</text>
+        </comment>
+        <comment>
+            <user>Charlie</user>
+            <text>Congratulations!</text>
+        </comment>
+        <comment>
+            <user>Diana</user>
+            <text>Well done, Alice!</text>
+        </comment>
+    </comments>
+
+    <tags>
+        <tag>#programming</tag>
+        <tag>#java</tag>
+    </tags>
+</post>
+
+Convert into JSON, YML
+Order #1001 was placed by customer Alice Johnson (email: alice@email.com) on January 15, 2024. The order contains 2 Laptops at $1200 each and 1 Mouse at $25. Shipping address is 123 Main St, New York, NY 10001. Total amount is $2425. Payment method is Credit Card. Order status is 'Shipped'.
+
+JSON:
+{
+  "order": {
+    "orderId": 1001,
+    "customer": {
+      "name": "Alice Johnson",
+      "email": "alice@email.com"
+    },
+    "date": "2024-01-15",
+    "items": [
+      {
+        "product": "Laptop",
+        "quantity": 2,
+        "price": 1200
+      },
+      {
+        "product": "Mouse",
+        "quantity": 1,
+        "price": 25
+      }
+    ],
+    "shippingAddress": "123 Main St, New York, NY 10001",
+    "totalAmount": 2425,
+    "paymentMethod": "Credit Card",
+    "status": "Shipped"
+  }
+}
+
+YML:
+
+order:
+  orderId: 1001
+  customer:
+    name: Alice Johnson
+    email: alice@email.com
+  date: 2024-01-15
+
+  items:
+    - product: Laptop
+      quantity: 2
+      price: 1200
+
+    - product: Mouse
+      quantity: 1
+      price: 25
+
+  shippingAddress: 123 Main St, New York, NY 10001
+  totalAmount: 2425
+  paymentMethod: Credit Card
+  status: Shipped
